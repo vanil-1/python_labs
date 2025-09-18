@@ -18,11 +18,11 @@
 
 ![03_discount_vat.py](images/lab03/03_discount_vat.png)
 
-## 04_minuts_to_hhmm.py
+## 04_minutes_to_hhmm.py
 
 Программа считывает количество минут и переводит их в часы в формате hh:mm (чч:мм):
 
-![04_minuts_to_hhmm.py](images/lab04/04_minuts_to_hhmm.png)
+![04_minuts_to_hhmm.py](images/lab04/04_minutes_to_hhmm.png)
 
 ## 05_initials_and_len.py
 
