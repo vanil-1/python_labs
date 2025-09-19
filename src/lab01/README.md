@@ -4,40 +4,40 @@
 
 Программа считывает имя и возраст пользователя, возвращет строку привествия с указанием возраст '+1' (какой возраст будет через год):
 
-![01_greeting.py](images/lab01/01_greeting.png)
+![01_greeting.py](/images/lab01/01_greeting.png)
 
 ## 02_sum_avg.py
 
 Программа считывает 2 числа (a и b) и выводит их сумму и среднее значение:
 
-![02_sum_avg.py](images/lab01/02_sum_avg.png)
+![02_sum_avg.py](/images/lab01/02_sum_avg.png)
 
 ## 03_discount_vat.py
 
 Программа считываетс 3 числа (price - цена, discount - скидка, vat - НДС) и выводит цену с учётом скидки, НДС и итоговую цену:
 
-![03_discount_vat.py](images/lab01/03_discount_vat.png)
+![03_discount_vat.py](/images/lab01/03_discount_vat.png)
 
 ## 04_minutes_to_hhmm.py
 
 Программа считывает количество минут и переводит их в часы в формате hh:mm (чч:мм):
 
-![04_minuts_to_hhmm.py](images/lab01/04_minutes_to_hhmm.png)
+![04_minuts_to_hhmm.py](/images/lab01/04_minutes_to_hhmm.png)
 
 ## 05_initials_and_len.py
 
 Программа считывает ФИО и выводит инициалы пользователя, а также длину входных данных:
 
-![05_initials_and_len.py](images/lab01/05_initials_and_len.png)
+![05_initials_and_len.py](/images/lab01/05_initials_and_len.png)
 
 ## 06_full_part_time.py
 
 Программа считывает n-е количество строк (n = numberOfStrings), заполняемые данными пользователя (фамилию, имя, возраст и форму обучения, т.е. очная форма обучения - 'True', заочная форма обучения - 'False'). Далее программа выводит количество учеников на очной форме обучения (первое число) и учеников на заочной форме обучения (второе число):
 
-![06_full_part_time.py](images/lab01/06_full_part_time.png)
+![06_full_part_time.py](/images/lab01/06_full_part_time.png)
 
 ## 07_shifr.py
 
 Программа считывает зашифрованную строку и расшифровывает её по правилам, заданным в задаче (расшифрованное слово начинается с заглавной буквы, следующая буква следует после цифры, а последующие символы повторяются с определённым шагом равным количеству символом между первым и вторым символом): 
 
-![07_shifr.py](images/lab01/07_shifr.png)
+![07_shifr.py](/images/lab01/07_shifr.png)
