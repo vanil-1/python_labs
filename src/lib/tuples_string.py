@@ -6,12 +6,3 @@ def tuples(fio, group, gpa):
     elif type(gpa) != float: return TypeError
     elif fio != '' and group != ''and type(gpa) != float: return ValueError and TypeError
     else: return ValueError
-
-print(tuples("Иванов Иван Иванович", "BIVT-25", 4.6))
-print(tuples("Петров Пётр", "IKBO-12", 5.0))
-print(tuples("Петров Пётр Петрович", "IKBO-12", 5.0))
-print(tuples("  сидорова  анна   сергеевна ", "ABB-01", 3.999))
-print(tuples('', 'BIVT-25', 4.6))
-print(tuples('wef wfe', '', 4.6))
-print(tuples('qwd dqwd', 'BIVT-25', 4))
-print(tuples('', '', 4))
