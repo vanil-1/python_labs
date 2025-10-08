@@ -30,7 +30,11 @@
 
 ## tuples_string
 
-Считывание кортежа и его обработка (tuple['fio', 'group',float]) --> str(F I.O., гр. group, GPA float)
+Считывание кортежа и его обработка (tuple['fio', 'group',float]) --> str(F I.O., гр. group, GPA float).
+
+## is_matrix
+
+Проверка матрицы - рванная или нет.
 
 ## Next?
 

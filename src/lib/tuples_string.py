@@ -1,4 +1,5 @@
-def tuples(fio, group, gpa):
+def tuples(rec: tuple[str, str, float]):
+    fio, group, gpa = rec[0], rec[1], rec[2]
     if fio != '' and group != '' and type(gpa) == float:
         list_fio = [i for i in fio.split()]
         initials_io = [str(i)[0].upper() + '.' for i in list_fio[1:]]
