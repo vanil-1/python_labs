@@ -1,0 +1,1 @@
+def top_n(freq: dict[str, int], n: int = 5): return sorted(freq.items())[:n]
