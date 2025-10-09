@@ -22,14 +22,15 @@ print('-' * 20)
 # COUNT_FREQ
 def count_freq(tokens: list[str]):
     token_keys_all = sorted(set(tokens))
-    return {token_key: tokens.count(token_key) for token_key in token_keys_all}
+    return sorted({token_key: tokens.count(token_key) for token_key in token_keys_all}.items(), \
+                  key = lambda item: (-item[1], item[0]))
 
 count_freq_case_tokens = [["a","b","a","c","b","a"], ["bb","aa","bb","aa","cc"]]
 for case_tokens in count_freq_case_tokens: print(count_freq(case_tokens))
 print('-' * 20)
 
 # TOP_N
-def top_n(freq: dict[str, int], n: int = 5): return sorted(freq.items())[:n]
+def top_n(freq: dict[str, int], n: int = 5): return sorted(freq.items(), key = lambda item: (-item[1], item[0]))[:n]
 
 top_n_case_freq = [{"b":2,"a":3,"c":1},{"bb":2,"cc":1,"aa":2}]
 for case_freq in top_n_case_freq: print(top_n(case_freq))
