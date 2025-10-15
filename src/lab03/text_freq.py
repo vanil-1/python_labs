@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'l
 import text_token
 
 
-def text_analuzator(text):
+def text_analizator(text):
     text_normalize = text_token.normalize(text)
     text_tokens = text_token.tokenize(text_normalize)
     text_freq = text_token.count_freq(text_tokens)
@@ -19,5 +19,5 @@ def text_analuzator(text):
     for word_top_5 in text_top: print(f'{word_top_5[0]}: {word_top_5[1]}')
 
 
-text = str(input())
-text_analuzator(text)
+text = sys.stdin.read()
+text_analizator(text)
