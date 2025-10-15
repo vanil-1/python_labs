@@ -48,9 +48,11 @@
 
 ![extra_task.py](/images/lab03/extra_task/extra_task_tabl_off.png)
 
-либо в табличном виде:
+либо в табличном виде (1):
 
 ![extra_task.py](/images/lab03/extra_task/extra_task_tabl_on.png)
+
+Программа заканчивает работы при повторном нажатии клавиши "ENTER".
 
 p.s. текст для тестирования программы расположен [example.txt](/data/lab03/example.txt)
 
