@@ -1,4 +1,4 @@
-from is_matrix import is_matrix
+from module_for_list.is_matrix import is_matrix
 
 def col_sums(mat: list[list[float | int]]):
     state_of_matrix = is_matrix.is_matrix(mat)

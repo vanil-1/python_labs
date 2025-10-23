@@ -1,4 +1,4 @@
-from is_matrix import is_matrix
+from module_for_list.is_matrix import is_matrix
 
 def transpose(mat: list[list[float | int]]):
     if mat == []: return []

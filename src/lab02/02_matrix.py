@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # добавляет путь к репозиторию с модулями
-import is_matrix # модуль проверяющий является ли матрица рванной
+import module_for_list.is_matrix as is_matrix # модуль проверяющий является ли матрица рванной
 
 
 
