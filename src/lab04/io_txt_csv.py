@@ -13,25 +13,29 @@ def frequencies_from_text(text: str) -> dict[str, int]:
     tokens = tokenize(normalize(text))
     return Counter(tokens)  # dict-like
 
-def sorted_word_counts(freq: dict[str, int], file_name) -> list[tuple[str, int]]: return [(file_name, pos[0], pos[1]) for pos in sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))]
+def sorted_word_counts_per_file(freq: dict[str, int], file_name) -> list[tuple[str, int]]: return [(file_name, pos[0], pos[1]) for pos in sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))]
 
 def write_csv(rows: Iterable[Sequence], path: str | Path, header: tuple[str, ...] | None = None) -> None:
     p, rows = Path(path), list(rows)
     p.parent.mkdir(parents=True, exist_ok=True)
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        if header is not None: w.writerow(header)
+        if header: w.writerow(header)
         for r in rows: w.writerow(r)
 
-def analize_txt(path): 
+def analize_txt_per_file(path): 
     files_sort, all_files = [], sorted(Path(path).glob('*.txt'), reverse = True)
-    for file in all_files: files_sort = files_sort + sorted_word_counts(frequencies_from_text(read_text(file)), file.name)
+    for file in all_files: files_sort = files_sort + sorted_word_counts_per_file(frequencies_from_text(read_text(file)), file.name)
     return files_sort
 
+def text_csv_base(path_repositories, name_of_csv_file, header):
+    txt_per_file = analize_txt_per_file(path_repositories)
+    write_csv(txt_per_file, f"data/lab04/{name_of_csv_file}_report_per_file.csv", header)
+    return 'Acsess...'
 
-path_to_repositories = input('Репозиторий со всеми файлами: ')
+
+path_repositories = input('Репозиторий со всеми файлами: ')
 name_of_csv_file = input('Имя нового(создать) или старого(переписать) файла-csv: ')
 header = tuple(input('Имена столбцов: ').replace(',', ' ').split())
-txt = analize_txt(path_to_repositories)
-write_csv(txt, f"data/lab04/{name_of_csv_file}.csv", header)  # создаст CSV
-print('Acsess...')
+
+text_csv_base(path_repositories, name_of_csv_file, header)
