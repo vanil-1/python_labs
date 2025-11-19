@@ -32,22 +32,22 @@ write_csv() записываетв все данные в формате CSV, с
 
 Используемые библиотеки:
 
-![io_txt_csv.py](/images/lab04/text_report/lib_text_report.png)
+![text_report.py](/images/lab04/text_report/lib_text_report.png)
 
 ### read_text(), freq_from_text(), sorted_word_per_file(), sorted_word_total(), analize_txt_per_file(), analize_txt_total()
 
 Всё аналогично функциям из прошлого задания кроме 2-х функций: sorted_word_total() и analize_txt_total(). Они не учитывают название файлов, сортируя все значения из всех файлов.
 
-![io_txt_csv.py](/images/lab04/text_report/text_proccesing_total.png)
+![text_report.py](/images/lab04/text_report/text_proccesing_total.png)
 
 ### write_csv(), text_csv_duo()
 
 Аналогично функциям из прошлого задания, но text_csv_duo() выдаёт дополнительный отчёт, сводку данных об анализе текстового файла.
 
-![io_txt_csv.py](/images/lab04/text_report/write_csv_total.png)
+![text_report.py](/images/lab04/text_report/write_csv_total.png)
 
 ### 'input'
 
 Ввод репозитория с обрабатываемыми файлами, имени новго или существующего файла, а также название заголовка:
 
-![io_txt_csv.py](/images/lab04/text_report/input_total.png)
+![text_report.py](/images/lab04/text_report/input_total.png)
