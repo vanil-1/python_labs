@@ -2,7 +2,6 @@ from pathlib import Path
 from typing import Iterable, Sequence
 from collections import Counter
 import sys, os, csv
-
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # добавляет путь к репозиторию с модулями
 from module_for_text.text_token import tokenize, normalize
 
