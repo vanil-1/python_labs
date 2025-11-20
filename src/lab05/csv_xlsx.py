@@ -2,11 +2,11 @@ import sys, os, csv
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib')))
-from path_proccesing import path_proccesing, path_is_csv
+from pathProccesing import pathProccesing
 
-def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
-    csv_path, xlsx_path = path_proccesing(csv_path, False), path_proccesing(xlsx_path, True) 
-    if not(path_is_csv(csv_path)):
+def csv_to_xlsx(csv_path: str, xlsx_path: str, path_suffix = ('.csv', '.xlsx')) -> None:
+    csv_path, xlsx_path = pathProccesing(csv_path, False, path_suffix), pathProccesing(xlsx_path, True, path_suffix) 
+    if csv_path:
         wb = Workbook()
         ws = wb.active
         ws.title = "Sheet1"
@@ -17,6 +17,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
             for r in rows: ws.append(list(r.values()))
             for index in range(1, len(read_csv.fieldnames) + 1): ws.column_dimensions[get_column_letter(index)].width = max_len_w
             wb.save(xlsx_path)
-    else: return path_is_csv(csv_path)
+    else: return csv_path
 
 csv_to_xlsx("data/lab05/samples/cities.csv", "data/lab05/out/people.xlsx")
