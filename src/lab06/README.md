@@ -102,4 +102,4 @@
 
 Неправильный путь к файлу или файл не существует:
 
-![cli_convert.py](/images/lab06/cli_convert/convert_FileNotFoundError.png)
+![cli_convert.py](/images/lab06/cli_convert/convert_FileNotFounderror.png)
