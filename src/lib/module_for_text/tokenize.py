@@ -1,3 +1,5 @@
 import re
 
-def tokenize(text: str): return re.findall( r'\w+(?:-\w+)*', text)
+
+def tokenize(text: str):
+    return re.findall(r"\w+(?:-\w+)*", text)
