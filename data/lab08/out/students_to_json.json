@@ -1,0 +1,50 @@
+[
+  {
+    "fio": "Иванов Иван Иванович",
+    "birthdate": "20/11/2000",
+    "group": "ABCD",
+    "gpa": 4.5
+  },
+  {
+    "fio": "Петров Пётр Петрович",
+    "birthdate": "05.03.1999",
+    "group": "XYZ",
+    "gpa": 3
+  },
+  {
+    "fio": "Сидоров Сидор Сидорович",
+    "birthdate": "2001/12/31",
+    "group": "QWE",
+    "gpa": 5
+  },
+  {
+    "fio": "Алексеева Анна Сергеевна",
+    "birthdate": "1998.07.15",
+    "group": "RTY",
+    "gpa": 0.0
+  },
+  {
+    "fio": "Brown Bob",
+    "birthdate": "01/01/2005",
+    "group": "GHJK",
+    "gpa": 2.7
+  },
+  {
+    "fio": "Smith John",
+    "birthdate": "14.09.2003",
+    "group": "KLM",
+    "gpa": 1
+  },
+  {
+    "fio": "Johnson Kate",
+    "birthdate": "2010/04/09",
+    "group": "POI",
+    "gpa": 4.8
+  },
+  {
+    "fio": "Williams Mark",
+    "birthdate": "1995.02.28",
+    "group": "BNM",
+    "gpa": 3.9
+  }
+]
