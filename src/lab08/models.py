@@ -27,10 +27,9 @@ class Student:
 
     def to_dict(self) -> dict:
         all_data = [self.fio, self.birthdate, self.group, self.gpa]
-        if (
-            sum(type(i) == str and i != "" for i in all_data) == 3
-            and type(all_data[3]) in [float, int]
-        ):
+        if sum(type(i) == str and i != "" for i in all_data) == 3 and type(
+            all_data[3]
+        ) in [float, int]:
             return {
                 "fio": self.fio,
                 "birthdate": self.birthdate,

@@ -16,7 +16,8 @@ def students_to_json(students, path):
 
 def students_from_json(path) -> list:
     path = pathProccesing(path, False, path_suffix=".json")
-    students = json.load(path.open(encoding="utf-8"))
+    data = json.load(path.open(encoding="utf-8"))
+    students = [Student.from_dict(st) for st in data]
     return students
 
 
