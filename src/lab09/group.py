@@ -43,9 +43,9 @@ class Group:
         else:
             return "Student in CSV!"
 
-    def find(self, Student: Student):
+    def find(self, student: str):
         rows = Group._read_all(self)
-        return [r for r in rows if Student.fio in r["fio"]]
+        return [r for r in rows if student in r["fio"]]
 
     def remove(self, Student: Student):
         rows = Group._read_all(self)
@@ -67,20 +67,21 @@ class Group:
         if Group.find(self, fio) != []:
             for i, row in enumerate(rows):
                 if row["fio"] == fio:
+                    old_student = Student.from_dict(row)
                     rows.pop(i)
                     rows.insert(
                         i,
                         {
-                            "fio": Student.fio if Student.fio != "" else row["fio"],
+                            "fio": Student.fio if Student.fio != old_student.fio else row["fio"],
                             "birthdate": (
                                 Student.birthdate
-                                if Student.birthdate != ""
+                                if Student.birthdate != old_student.birthdate
                                 else row["birthdate"]
                             ),
                             "group": (
-                                Student.group if Student.group != "" else row["group"]
+                                Student.group if Student.group != old_student.group else row["group"]
                             ),
-                            "gpa": Student.gpa if Student.gpa != "" else row["gpa"],
+                            "gpa": Student.gpa if Student.gpa != old_student.gpa else row["gpa"],
                         },
                     )
                     break
@@ -118,18 +119,14 @@ class Group:
 
 path_to_group = Group("data/lab09/students.csv")
 
-print(path_to_group)
-# print(path_to_group.stats())
-# for rows in path_to_group._read_all():
-# print(rows)
+#for el in path_to_group.list():
+    #print(el)
 
-# for el in path_to_group.list():
-# print(el)
-
-# new_student = Student('misha', '30.12.2006', 'BIVT-25-7', 3)
-# ffind_student = "Danwefa"
-# update_student = Student("Michail", "12.10.1999", "rock", 2)
-# print(path_to_group.add(new_student))
-# print(path_to_group.find(new_student))
-# print(path_to_group.remove(new_student))
-# print(path_to_group.update("misha", update_student))
+#new_student = Student('Boris ', '17.10.2001', 'BIVT-25-2', 3.3)
+#print(path_to_group.add(new_student))
+#find_student = "Dima"
+#print(path_to_group.find(find_student))
+#print(path_to_group.remove(new_student))
+#update_student = Student("Michachail", "12.10.1890", "rock", 2)
+#print(path_to_group.update("Micha", update_student))
+print(path_to_group.stats())
