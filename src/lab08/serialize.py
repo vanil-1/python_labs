@@ -32,4 +32,5 @@ students = [
 ]
 
 students_to_json(students, "data/lab08/out/students_to_json.json")
-students_from_json("data/lab08/samples/students_to_json.json")
+for i in students_from_json("data/lab08/samples/students_to_json.json"):
+    print(i)
