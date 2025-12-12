@@ -18,7 +18,7 @@ class Student:
         check_date(self.birthdate)
         if not (type(self.gpa) in [float, int] and (0 <= self.gpa <= 5)):
             raise ValueError(
-                f"WARNING: gpa must be between 0 and 10, type of gpa must be int or float: {self.gpa}"
+                f"WARNING: gpa must be between 0 and 5, type of gpa must be int or float: {self.gpa}"
             )
 
     def age(self) -> int:

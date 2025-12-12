@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "python_labs"
 version = "2025.0.0"
-authors = [{ name = "vanil-4", email = "danilayanigin@gmail.com" }]
+authors = [{ name = "vanil-1", email = "danilayanigin@gmail.com" }]
 dependencies = [
   "requests>=2.32",
   "pandas>=2.2"
