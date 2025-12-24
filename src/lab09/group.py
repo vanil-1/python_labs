@@ -72,16 +72,26 @@ class Group:
                     rows.insert(
                         i,
                         {
-                            "fio": Student.fio if Student.fio != old_student.fio else row["fio"],
+                            "fio": (
+                                Student.fio
+                                if Student.fio != old_student.fio
+                                else row["fio"]
+                            ),
                             "birthdate": (
                                 Student.birthdate
                                 if Student.birthdate != old_student.birthdate
                                 else row["birthdate"]
                             ),
                             "group": (
-                                Student.group if Student.group != old_student.group else row["group"]
+                                Student.group
+                                if Student.group != old_student.group
+                                else row["group"]
                             ),
-                            "gpa": Student.gpa if Student.gpa != old_student.gpa else row["gpa"],
+                            "gpa": (
+                                Student.gpa
+                                if Student.gpa != old_student.gpa
+                                else row["gpa"]
+                            ),
                         },
                     )
                     break
@@ -119,14 +129,14 @@ class Group:
 
 path_to_group = Group("data/lab09/students.csv")
 
-#for el in path_to_group.list():
-    #print(el)
+# for el in path_to_group.list():
+# print(el)
 
-#new_student = Student('Boris ', '17.10.2001', 'BIVT-25-2', 3.3)
-#print(path_to_group.add(new_student))
-#find_student = "Dima"
-#print(path_to_group.find(find_student))
-#print(path_to_group.remove(new_student))
-#update_student = Student("Michachail", "12.10.1890", "rock", 2)
-#print(path_to_group.update("Micha", update_student))
+# new_student = Student('Boris ', '17.10.2001', 'BIVT-25-2', 3.3)
+# print(path_to_group.add(new_student))
+# find_student = "Dima"
+# print(path_to_group.find(find_student))
+# print(path_to_group.remove(new_student))
+# update_student = Student("Michachail", "12.10.1890", "rock", 2)
+# print(path_to_group.update("Micha", update_student))
 print(path_to_group.stats())
